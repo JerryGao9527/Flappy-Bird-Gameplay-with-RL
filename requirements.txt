@@ -1,0 +1,8 @@
+scikit-learn
+gym==0.25.0
+gym[classic_control]
+numpy
+matplotlib
+stable-baselines3
+tqdm
+shimmy>=0.2.1
