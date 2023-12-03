@@ -1,3 +1,37 @@
+Metadata-Version: 2.1
+Name: flappy-bird-gymnasium
+Version: 0.3.0
+Summary: A Gymnasium environment for the Flappy Bird game.
+Home-page: https://github.com/markub3327/flappy-bird-gymnasium
+Download-URL: https://github.com/markub3327/flappy-bird-gymnasium/releases
+Author: Martin Kubovcik
+Author-email: markub3327@gmail.com
+License: MIT License
+Project-URL: Bug Tracker, https://github.com/markub3327/flappy-bird-gymnasium/issues
+Keywords: Flappy-BirdGame Gymnasium Farama-Foundation Reinforcement-Learning Reinforcement-Learning-Environment
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gymnasium
+Requires-Dist: numpy
+Requires-Dist: pygame
+
 Flappy Bird Bot using Reinforcement Learning in Python
 ===================
 ![4000+ scored](http://i.imgur.com/00Mf320.png)
