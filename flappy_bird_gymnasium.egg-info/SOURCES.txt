@@ -2,8 +2,11 @@ LICENSE
 README.md
 setup.cfg
 setup.py
+flappy_bird_gymnasium/PG_REINFORCE.py
 flappy_bird_gymnasium/__init__.py
 flappy_bird_gymnasium/cli.py
+flappy_bird_gymnasium/model.py
+flappy_bird_gymnasium/test.py
 flappy_bird_gymnasium/train.py
 flappy_bird_gymnasium.egg-info/PKG-INFO
 flappy_bird_gymnasium.egg-info/SOURCES.txt

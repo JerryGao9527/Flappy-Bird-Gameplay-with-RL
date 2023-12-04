@@ -313,7 +313,9 @@ class FlappyBirdLogic:
 
         # agent touch the top of the screen as punishment
         if self.player_y < 0:
-            reward = -0.5
+            reward = -1
+            terminal = True
+            self.player_vel_y = 0
 
         # move pipes to left
         for up_pipe, low_pipe in zip(self.upper_pipes, self.lower_pipes):
