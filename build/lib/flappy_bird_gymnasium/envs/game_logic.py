@@ -282,7 +282,7 @@ class FlappyBirdLogic:
             pipe_mid_pos = pipe["x"] + PIPE_WIDTH / 2
             if pipe_mid_pos <= player_mid_pos < pipe_mid_pos + 4:
                 self.score += 1
-                reward = 2  # reward for passed pipe
+                reward = 1  # reward for passed pipe
                 self.sound_cache = "point"
 
         # player_index base_x change

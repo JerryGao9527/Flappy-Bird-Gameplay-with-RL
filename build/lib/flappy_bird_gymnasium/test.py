@@ -18,16 +18,15 @@ def test_policy(env, policy, num_episodes):
             state = torch.from_numpy(state).float().unsqueeze(0)
             with torch.no_grad():  # Disable gradient calculation
                 action_probs = policy(state)
-                print(action_probs.numpy())
+                # print(action_probs.numpy())
             # action = np.argmax(action_probs.numpy())  # Choose action with highest probability
             action = np.random.choice(np.array([0, 1]), p=action_probs.detach().numpy()[0])
             state, reward, done, _, info = env.step(action)
+            print(state)
             total_reward += reward
 
             if done:
                 break
-
-        print(f"Episode {episode + 1}: Total steps {i}")
 
 
 # Test Environment
