@@ -45,6 +45,8 @@ def reinforce(env, use_baseline, policy, optimizer, epochs, batch_size, gamma, e
                     action = np.random.choice(np.array([0, 1]), p=action_probs.detach().numpy()[0]) # Greedy action
 
                 next_state, reward, done, _, info = env.step(action)
+                if reward == 0.1:
+                    reward *= max((100 - t) / 100, 0)
                 log_probs.append(torch.log(action_probs.squeeze(0)[action] + 1)) # For numerical stability 
                 rewards.append(reward)
                 
@@ -83,7 +85,7 @@ def reinforce(env, use_baseline, policy, optimizer, epochs, batch_size, gamma, e
         epoch_policy_loss.backward()
         optimizer.step()
 
-        epsilon = max(0.05, max(0.9995 * epsilon, 0.1))
+        epsilon = max(0.9995 * epsilon, 0.1)
 
         # Print average duration every 1000 episodes
         if epoch % 1000 == 0:
@@ -111,11 +113,10 @@ if __name__ == '__main__':
 
     # Network Parameters
     input_size = env.observation_space.shape[0]
-    hidden_size = 128
     output_size = 2
 
     # Create Policy Network and Optimizer
-    policy = REINFORCE(input_size, hidden_size, output_size).to(device)
+    policy = REINFORCE(input_size, output_size).to(device)
     optimizer = torch.optim.Adam(policy.parameters(), lr=args.lr, weight_decay=1e-5)
 
     # Training
